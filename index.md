@@ -27,3 +27,4 @@ Published in Pattern Recognition, 2021.
 
 - [Regularized Bagged Canonical Component Analysis for Multiclass Learning in Brain Imaging](https://link.springer.com/article/10.1007/s12021-020-09470-y).
 Published in Neuroinformatics, 2021.
+
