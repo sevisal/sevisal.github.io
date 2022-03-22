@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+# Carlos Sevilla Salcedo
 
-You can use the [editor on GitHub](https://github.com/sevisal/sevisal.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+I currently work as a post-doc at Aalto university with [Samuel Kaski](https://people.aalto.fi/samuel.kaski) and [Arto Klami](https://researchportal.helsinki.fi/en/persons/arto-klami) on Bayesian frameworks and user feedback.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## About me
 
-### Markdown
+I received the B.Sc. degree in telecommunication engineering from the Universidad de Granada in 2015. I then received the M.Sc. doing two bilingual masters in telecommunications engineering and multimedia and communications from the Universidad Carlos III de Madrid in 2017. In 2021, I recieved my Ph.D. from Universidad Carlos III de Madrid in 2021 under the supervision of [Vanessa Gómez Verdejo](http://vanessa.webs.tsc.uc3m.es/). 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+My research is focused on Bayesian machine learning and latent models mainly used for health problems. My Ph.D. was centered around using neuroaimaging data for the characteristaion of mental disorders using Bayesian latent models. Since then, I have been exploring different approaches to work with Bayesian variational inference for tasks like working with longituinal data or exploring kernel extentions.
 
-```markdown
-Syntax highlighted code block
+## Publications
 
-# Header 1
-## Header 2
-### Header 3
+- [Multi-task longitudinal forecasting with missing values on Alzheimer's Disease](https://arxiv.org/abs/2201.05040). 
+Under review.
 
-- Bulleted
-- List
+- [Extended-Spectrum Beta-Lactamase and Carbapenemase-Producing prediction in Klebsiella pneumoniae based on MALDI-TOF mass spectra](https://www.biorxiv.org/content/10.1101/2021.10.04.463058v4.abstract). 
+Under review.
 
-1. Numbered
-2. List
+- [Bayesian Sparse Factor Analysis with Kernelized Observations](https://www.sciencedirect.com/science/article/pii/S0925231222002946).
+Published in Neurocomputing, 2022.
 
-**Bold** and _Italic_ and `Code` text
+- [A Novel Bayesian Linear Regression Model for the Analysis of Neuroimaging Data](https://www.mdpi.com/2076-3417/12/5/2571). 
+Published in Applied Science, 2022.
 
-[Link](url) and ![Image](src)
-```
+- [Sparse Semi-supervised Heterogeneous Interbattery Bayesian Analysis](https://www.sciencedirect.com/science/article/pii/S0031320321003289).
+Published in Pattern Recognition, 2021.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sevisal/sevisal.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- [Regularized Bagged Canonical Component Analysis for Multiclass Learning in Brain Imaging](https://link.springer.com/article/10.1007/s12021-020-09470-y).
+Published in Neuroinformatics, 2021.
