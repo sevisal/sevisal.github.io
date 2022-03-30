@@ -20,7 +20,7 @@ Work experience
 * 2022-: Post-doc researcher.
   * Aalto University.
   * Field: Bayesian Machine Learning.
-  * Supervisors: [Samuel Kaski](https://people.aalto.fi/samuel.kaski) and [Arto Klami](https://researchportal.helsinki.fi/en/persons/arto-klami).
+  * Supervisors: [Prof. amuel Kaski](https://people.aalto.fi/samuel.kaski) and [Dr. Arto Klami](https://researchportal.helsinki.fi/en/persons/arto-klami).
   * 
 * 2018-2021: Research Assistant
   * Universidad Carlos III de Madrid.
