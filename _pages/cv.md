@@ -21,7 +21,6 @@ Work experience
   * Aalto University.
   * Field: Bayesian Machine Learning.
   * Supervisors: [Prof. Samuel Kaski](https://people.aalto.fi/samuel.kaski) and [Dr. Arto Klami](https://researchportal.helsinki.fi/en/persons/arto-klami).
-  * 
 * 2018-2021: Research Assistant
   * Universidad Carlos III de Madrid.
   * Field: Bayesian Machine Learning.
