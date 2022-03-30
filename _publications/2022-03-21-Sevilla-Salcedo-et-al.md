@@ -8,11 +8,3 @@ venue: 'Neurocomputing'
 paperurl: 'https://reader.elsevier.com/reader/sd/pii/S0925231222002946?token=FD7640A518EC40C69518DAAE3F3EC73B2CB20FE332EE05A84A4578ADED704ACA57168B36AE097B11E63C62B1635FE188&originRegion=eu-west-1&originCreation=20220330124258'
 citation: 'Carlos Sevilla-Salcedo, Alejandro Guerrero-López, Pablo M. Olmos, Vanessa Gómez-Verdejo, Bayesian Sparse Factor Analysis with Kernelized Observations, Neurocomputing, 2022, ISSN 0925-2312, https://doi.org/10.1016/j.neucom.2022.03.024.'
 ---
-Bibtex to cite:
-@article{sevilla2022bayesian,
-  title={Bayesian sparse factor analysis with kernelized observations},
-  author={Sevilla-Salcedo, Carlos and Guerrero-L{\'o}pez, Alejandro and Olmos, Pablo M and G{\'o}mez-Verdejo, Vanessa},
-  journal={Neurocomputing},
-  year={2022},
-  publisher={Elsevier}
-}
