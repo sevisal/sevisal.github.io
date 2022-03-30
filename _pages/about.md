@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Dr. Carlos Sevilla Salcedo"
+title: "About me"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,7 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-## About me
 I currently work as a post-doc at Aalto university with [Samuel Kaski](https://people.aalto.fi/samuel.kaski) and [Arto Klami](https://researchportal.helsinki.fi/en/persons/arto-klami) on Bayesian frameworks and user feedback.
 
 I received the B.Sc. degree in telecommunication engineering from the Universidad de Granada in 2015. 
