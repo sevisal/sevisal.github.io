@@ -11,30 +11,30 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Telecommunications Engineering, Universidad de Granada, 2015.
+* M.S. in Telecommunications Engineering and in Multimedia and Communications, Universidad Carlos III de Madrid, 2017.
+* Ph.D in Machine Learning applied to Medicine, Universidad Carlos III de Madrid, 2021.
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* 2022-: Post-doc researcher.
+  * Aalto University.
+  * Field: Bayesian Machine Learning.
+  * Supervisors: [Samuel Kaski](https://people.aalto.fi/samuel.kaski) and [Arto Klami](https://researchportal.helsinki.fi/en/persons/arto-klami).
+  * 
+* 2018-2021: Research Assistant
+  * Universidad Carlos III de Madrid.
+  * Field: Bayesian Machine Learning.
+  * Supervisor: [Dr. Vanessa Gómez Verdejo](http://vanessa.webs.tsc.uc3m.es/).
   
-Skills
+<!-- Skills
 ======
 * Skill 1
 * Skill 2
   * Sub-skill 2.1
   * Sub-skill 2.2
   * Sub-skill 2.3
-* Skill 3
+* Skill 3 -->
 
 Publications
 ======
