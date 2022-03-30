@@ -1,7 +1,7 @@
 ---
 title: "Sparse Semi-supervised Heterogeneous Interbattery Bayesian Analysis"
 collection: publications
-permalink: /publication/2021-12-Sevilla-Sacledo-et-al
+permalink: /publication/2021-12-Sevilla-Salcedo-et-al
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2021-12
 venue: 'Pattern Recognition'
