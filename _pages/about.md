@@ -1,12 +1,12 @@
-<!-- ---
+---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Dr. Carlos Sevilla Salcedo"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
---- -->
+---
 
 ## About me
 I currently work as a post-doc at Aalto university with [Samuel Kaski](https://people.aalto.fi/samuel.kaski) and [Arto Klami](https://researchportal.helsinki.fi/en/persons/arto-klami) on Bayesian frameworks and user feedback.
