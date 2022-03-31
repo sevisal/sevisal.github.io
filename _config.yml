@@ -276,7 +276,7 @@ whitelist:
   - jekyll-feed
   - jemoji
 
-theme             : "mmistakes/minimal-mistakes-jekyll"
+remote_theme             : "mmistakes/minimal-mistakes-jekyll"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 # Archives
 #  Type
