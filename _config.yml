@@ -138,7 +138,6 @@ exclude:
   - LICENSE
   - README
   - Rakefile
-  - assets
   - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor
@@ -263,11 +262,11 @@ timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database
 
 # Plugins
 plugins:
-  #- jekyll-paginate
-  #- jekyll-sitemap
-  #- jekyll-gist
-  #- jekyll-feed
-  #- jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
   - jekyll-remote-theme #Dark mode
 # mimic GitHub Pages with --safe
 whitelist:
@@ -277,7 +276,7 @@ whitelist:
   - jekyll-feed
   - jemoji
 
-remote_theme             : "mmistakes/minimal-mistakes"
+theme             : "minimal-mistakes-jekyll"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 # Archives
 #  Type
