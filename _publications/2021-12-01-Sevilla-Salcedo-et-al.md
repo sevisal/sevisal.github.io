@@ -5,7 +5,7 @@ permalink: /publication/2021-12-01-Sevilla-Salcedo-et-al
 excerpt: ''
 date: 2021-12-01
 venue: 'Pattern Recognition'
-paperurl: 'https://reader.elsevier.com/reader/sd/pii/S0031320321003289?token=A35FE903D8F6D7C61D4E2A3D3580F3624FF3F716525F35A1869FBEA8FBDEA308A8B70130E0882C1193625E0473D86A03&originRegion=eu-west-1&originCreation=20220330124713'
+paperurl: 'https://www.sciencedirect.com/science/article/abs/pii/S0031320321003289'
 citation: 'Carlos Sevilla-Salcedo, Vanessa Gómez-Verdejo, Pablo M. Olmos,
 Sparse semi-supervised heterogeneous interbattery bayesian analysis,
 Pattern Recognition,
