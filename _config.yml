@@ -8,7 +8,7 @@
 
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "en-GB"
 title                    : "Carlos Sevilla Salcedo / Post-doc"
 title_separator          : "-"
 name                     : &name "Carlos Sevilla Salcedo"
@@ -276,7 +276,7 @@ whitelist:
   - jekyll-feed
   - jemoji
 
-theme             : "minimal-mistakes-jekyll"
+theme             : "mmistakes/minimal-mistakes-jekyll"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 # Archives
 #  Type
