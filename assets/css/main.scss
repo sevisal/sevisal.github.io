@@ -40,13 +40,34 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #eee;
-    background: #041C32;
-  }
+.day   { background: #eee; color: black; }
+.night { background: #333; color: white; }
 
-  body a {
-    color: #809fff;
-  }
+@media (prefers-color-scheme: dark) {
+  .day.dark-scheme   { background:  #041C32; color: #eee; }
+  .night.dark-scheme { background: black; color:  #ddd; }
 }
+
+@media (prefers-color-scheme: light) {
+  .day.light-scheme   { background: white; color:  #555; }
+  .night.light-scheme { background:  #eee; color: black; }
+}
+
+.day, .night {
+  display: inline-block;
+  padding: 1em;
+  width: 7em;
+  height: 2em;
+  vertical-align: middle;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     color: #eee;
+//     background: #041C32;
+//   }
+
+//   body a {
+//     color: #809fff;
+//   }
+// }
