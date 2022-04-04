@@ -43,7 +43,8 @@
 @media (prefers-color-scheme: dark) {
   body {
     color: #eee;
-    background: #041C32;
+    background: rgb(53,128,129);
+    background: linear-gradient(300deg, rgba(53,128,129,1) 0%, rgba(7,7,64,1) 100%);
   }
 
   body a {
