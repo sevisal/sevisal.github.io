@@ -22,7 +22,8 @@
           animation-delay: 0.45s;
   background-color: $lighter-gray;
   border-top: 1px solid $light-gray;
-
+  opacity: 0.3;
+     
   footer {
     @include clearfix;
     margin-left: auto;
