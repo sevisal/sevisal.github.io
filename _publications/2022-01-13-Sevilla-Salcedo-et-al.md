@@ -3,7 +3,7 @@ title: "Multi-task longitudinal forecasting with missing values on Alzheimer's D
 collection: publications
 permalink: /publication/2020-01-13-Sevilla-Salcedo-et-al
 excerpt: ''
-date: 2022-11
+date: 2022-11-01
 venue: 'Computer Methods and Programs in Biomedicine'
 paperurl: 'https://arxiv.org/pdf/2201.05040.pdf'
 citation: "Carlos Sevilla-Salcedo, Vandad Imani, Pablo M． Olmos, Vanessa Gómez-Verdejo, Jussi Tohka,
