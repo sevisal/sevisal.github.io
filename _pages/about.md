@@ -17,20 +17,27 @@ My research is focused on Bayesian machine learning and latent models mainly use
 
 ## Publications
 
-- [Multi-task longitudinal forecasting with missing values on Alzheimer's Disease](https://arxiv.org/abs/2201.05040). 
+- [Bayesian learning of feature spaces for multitasks problems](https://arxiv.org/abs/2209.03028).
 Under review.
 
-- [Extended-Spectrum Beta-Lactamase and Carbapenemase-Producing prediction in Klebsiella pneumoniae based on MALDI-TOF mass spectra](https://www.biorxiv.org/content/10.1101/2021.10.04.463058v4.abstract). 
+- [Multimodal hierarchical Variational AutoEncoders with Factor Analysis latent space
+](https://arxiv.org/abs/2207.09185).
 Under review.
+
+- [Automatic antibiotic resistance prediction in Klebsiella pneumoniae based on MALDI-TOF mass spectra](https://www.sciencedirect.com/science/article/pii/S0952197622006340). 
+Published in Engineering Applications of Artificial Intelligence, February 2023.
+
+- [Multi-task longitudinal forecasting with missing values on Alzheimer's Disease](https://www.sciencedirect.com/science/article/pii/S0169260722004382). 
+Published in Computer Methods and Programs in Biomedicine, November 2022.
 
 - [Bayesian Sparse Factor Analysis with Kernelized Observations](https://www.sciencedirect.com/science/article/pii/S0925231222002946).
-Published in Neurocomputing, 2022.
+Published in Neurocomputing, June 2022.
 
 - [A Novel Bayesian Linear Regression Model for the Analysis of Neuroimaging Data](https://www.mdpi.com/2076-3417/12/5/2571). 
-Published in Applied Science, 2022.
+Published in Applied Science, March 2022.
 
 - [Sparse Semi-supervised Heterogeneous Interbattery Bayesian Analysis](https://www.sciencedirect.com/science/article/pii/S0031320321003289).
-Published in Pattern Recognition, 2021.
+Published in Pattern Recognition, December 2021.
 
 - [Regularized Bagged Canonical Component Analysis for Multiclass Learning in Brain Imaging](https://link.springer.com/article/10.1007/s12021-020-09470-y).
-Published in Neuroinformatics, 2021.
+Published in Neuroinformatics, June 2020.
