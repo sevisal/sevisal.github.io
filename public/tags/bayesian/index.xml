@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bayesian on Carlos Sevilla Salcedo</title>
+    <link>https://carlos.sevillasalcedo.org/tags/bayesian/</link>
+    <description>Recent content in Bayesian on Carlos Sevilla Salcedo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://carlos.sevillasalcedo.org/tags/bayesian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bayesian learning of feature spaces for multitasks problems</title>
+      <link>https://carlos.sevillasalcedo.org/publications/2023.rff-blr/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlos.sevillasalcedo.org/publications/2023.rff-blr/</guid>
+      <description>This paper presents a Bayesian framework to construct non-linear, parsimonious, shallow models for multitask regression. The proposed framework relies on the approximation of an RBF kernel by a linear combination of Random Fourier Features (RFFs). The main idea is to combine both primal and dual views of the same model under a single Bayesian formulation suited for multitask problems. From the dual point of view (kernel methods), the proposed formulation facilitates the introduction of prior domain knowledge through the RBF kernel parameter.</description>
+    </item>
+    
+    <item>
+      <title>Multi-view hierarchical Variational AutoEncoders with Factor Analysis latent space</title>
+      <link>https://carlos.sevillasalcedo.org/publications/2023.favae/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlos.sevillasalcedo.org/publications/2023.favae/</guid>
+      <description>Real-world databases are complex and usually require dealing with heterogeneous and mixed data types making the exploitation of shared information between views a critical issue. For this purpose, recent studies based on deep generative models merge all views into a nonlinear complex latent space, which can share information among views. However, this solution limits the model’s interpretability, flexibility, and modularity. We propose a novel method to overcome these limitations by combining multiple Variational AutoEncoders (VAE) with a Factor Analysis latent space (FA-VAE).</description>
+    </item>
+    
+    <item>
+      <title>Multi-task longitudinal forecasting with missing values on Alzheimer’s Disease</title>
+      <link>https://carlos.sevillasalcedo.org/publications/2022.tadpole/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlos.sevillasalcedo.org/publications/2022.tadpole/</guid>
+      <description>Background and Objective:Machine learning techniques typically used in dementia assessment are not able to learn multiple tasks jointly and deal with time-dependent heterogeneous data containing missing values. In this paper, we reformulate SSHIBA, a recently introduced Bayesian multi-view latent variable model, for jointly learning diagnosis, ventricle volume, and ADAS score in dementia on longitudinal data with missing values.
+Methods:We propose a novel Bayesian Variational inference framework capable of simultaneously imputing missing values and combining information from several views.</description>
+    </item>
+    
+    <item>
+      <title>A Novel Bayesian Linear Regression Model for the Analysis of Neuroimaging Data</title>
+      <link>https://carlos.sevillasalcedo.org/publications/2022.blr-fs/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlos.sevillasalcedo.org/publications/2022.blr-fs/</guid>
+      <description>In this paper, we propose a novel Machine Learning Model based on Bayesian Linear Regression intended to deal with the low sample-to-variable ratio typically found in neuroimaging studies and focusing on mental disorders. The proposed model combines feature selection capabilities with a formulation in the dual space which, in turn, enables efficient work with neuroimaging data. Thus, we have tested the proposed algorithm with real MRI data from an animal model of schizophrenia.</description>
+    </item>
+    
+    <item>
+      <title>Sparse Semi-supervised Heterogeneous Interbattery Bayesian Analysis</title>
+      <link>https://carlos.sevillasalcedo.org/publications/2021.sshiba/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlos.sevillasalcedo.org/publications/2021.sshiba/</guid>
+      <description>The Bayesian approach to feature extraction, known as factor analysis (FA), has been widely studied in machine learning to obtain a latent representation of the data. An adequate selection of the probabilities and priors of these bayesian models allows the model to better adapt to the data nature (i.e. heterogeneity, sparsity), obtaining a more representative latent space.
+The objective of this article is to propose a general FA framework capable of modelling any problem.</description>
+    </item>
+    
+  </channel>
+</rss>

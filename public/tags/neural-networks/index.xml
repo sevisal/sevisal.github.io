@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neural networks on Carlos Sevilla Salcedo</title>
+    <link>https://carlos.sevillasalcedo.org/tags/neural-networks/</link>
+    <description>Recent content in Neural networks on Carlos Sevilla Salcedo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://carlos.sevillasalcedo.org/tags/neural-networks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multi-view hierarchical Variational AutoEncoders with Factor Analysis latent space</title>
+      <link>https://carlos.sevillasalcedo.org/publications/2023.favae/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlos.sevillasalcedo.org/publications/2023.favae/</guid>
+      <description>Real-world databases are complex and usually require dealing with heterogeneous and mixed data types making the exploitation of shared information between views a critical issue. For this purpose, recent studies based on deep generative models merge all views into a nonlinear complex latent space, which can share information among views. However, this solution limits the model’s interpretability, flexibility, and modularity. We propose a novel method to overcome these limitations by combining multiple Variational AutoEncoders (VAE) with a Factor Analysis latent space (FA-VAE).</description>
+    </item>
+    
+  </channel>
+</rss>
