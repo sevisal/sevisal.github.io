@@ -1,4 +1,4 @@
-baseURL = "https://carlos.sevillasalcedo.org"
+baseURL = "https://sevisal.github.io"
 title = "Carlos Sevilla Salcedo"
 theme = "gokarna"
 languageCode = "en"
@@ -51,15 +51,9 @@ pygmentsStyle = "monokai"
     weight = 2
 
   [[menu.main]]
-    name = "Projects"
-    pre = "<span data-feather='code'></span>"
-    url = "/projects/"
-    weight = 3
-
-  [[menu.main]]
-    name = "Tags"
-    pre = "<span data-feather='tag'></span>"
-    url = "/tags/"
+    name = "Teaching"
+    pre = "<span data-feather='briefcase'></span>"
+    url = "/teaching/"
     weight = 4
 
   [[menu.main]]
@@ -70,7 +64,7 @@ pygmentsStyle = "monokai"
 
   [[menu.main]]
     identifier = "scholar"
-    pre = "<span data-feather='github'></span>"
+    pre = "<span data-feather='file-text'></span>"
     url = "https://scholar.google.es/citations?user=7dpI59oAAAAJ&hl"
     weight = 6
 
