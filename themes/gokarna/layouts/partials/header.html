@@ -2,16 +2,20 @@
     <nav class="header-nav">
 
         {{ if isset .Site.Params "avatarurl"}}
-        <div class="avatar">
-            <a href="{{ .Site.BaseURL }}">
-                <img src='{{ .Scratch.Get "avatarImgSrc" }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}" />
-            </a>
-        </div>
+            {{ if not .IsHome}}
+            <div class="avatar">
+                <a href="{{ .Site.BaseURL }}">
+                    <img src='{{ .Scratch.Get "avatarImgSrc" }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}" />
+                </a>
+            </div>
+            {{ end }}
         {{ end }}
 
+        {{ if not .IsHome}}
         <div class="nav-title">
             <a class="nav-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
         </div>
+        {{ end }}
 
         <div class="nav-links">
             {{ range .Site.Menus.main }}
