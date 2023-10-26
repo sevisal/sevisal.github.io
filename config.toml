@@ -5,16 +5,16 @@ languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
-
 # Choose one of emacs, trac or perldoc
 pygmentsStyle = "monokai"
 
 [params]
   footer = ""
-  description = "Post-doc at Aalto University on Bayesian Frameworks"
+  description = "Postdoctoral researcher in Machine Learning"
   avatarURL = "/images/Foto_Profe.jpg"
   AvatarAltText = "avatar"
   avatarSize = "size-m"
+  showPostsOnHomePage = "recent"
   customHeadHTML = """
     <!-- KaTeX -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
@@ -65,6 +65,7 @@ pygmentsStyle = "monokai"
   [[menu.main]]
     identifier = "scholar"
     pre = "<span data-feather='file-text'></span>"
+    # pre = "<img class='svg-inject' src='svg/icons/scholar2.svg'/>"
     url = "https://scholar.google.es/citations?user=7dpI59oAAAAJ&hl"
     weight = 6
 
