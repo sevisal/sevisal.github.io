@@ -5,18 +5,22 @@
         <p class="post-date">
             {{ dateFormat "January, 2006" .Date }}{{ if lt .Date .Lastmod }} | Updated {{ dateFormat "January, 2006" .Lastmod }}{{ end }}
         </p>
-        <small role="post-state">{{ .Params.state }}</small>
+        <small role="post-state"><i>{{ .Params.state }}</i></small>
         
         <ul class="post-tags">
-        tags: {{ range .Params.tags }}
-            <li class="post-tag"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-        {{ end }}
+            <li class="post-tag"><a href="{{.Params.Link}}">Link</a></li>
+            <li class="post-tag"><a href="{{.Params.Cite}}">Cite</a></li>
         </ul>
+        <!-- <ul class="post-tags">
+            tags: {{ range .Params.tags }}
+                <li class="post-tag"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+            {{ end }}
+        </ul> -->
     </div>
 
     <div class="post-content">
         <p>
-            {{ .Content }}
+            <div style="text-align: justify"> {{ .Content }} </div>
         </p>
         {{ if .Site.DisqusShortname }}
         <div class="post-comments">
