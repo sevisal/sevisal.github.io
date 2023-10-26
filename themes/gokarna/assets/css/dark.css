@@ -12,7 +12,7 @@ html {
 }
 
 .header {
-  background-color: rgba(var(--dark-primary-color), 0.85);
+  background-color: rgba(var(--dark-primary-color), 0.95);
 }
 
 .nav-hamburger-list {
