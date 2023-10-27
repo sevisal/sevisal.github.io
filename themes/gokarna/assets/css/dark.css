@@ -91,41 +91,21 @@ pre {
   box-shadow: rgb(33, 38, 45) 0px -1px 0px 0px inset;
 }
 
-.markdown-content h1 {
+.markdown-content h1, h2, h3 {
   color: var(--dark-heading-color);
 }
 
-.markdown-content h2 {
+.home-posts h1, h2, h3 {
   color: var(--dark-heading-color);
 }
 
-.markdown-content h3 {
+.post-content h1, h2, h3 {
   color: var(--dark-heading-color);
 }
 
-.home-posts h1 {
+.form-popup h1, h2, h3 {
   color: var(--dark-heading-color);
 }
-
-.list-posts h2 {
-  color: var(--dark-heading-color);
-}
-
-.list-posts h3 {
-  color: var(--dark-heading-color);
-}
-
-.post-content h1 {
-  color: var(--dark-heading-color);
-}
-
-.post-content h2 {
-  color: var(--dark-heading-color);
-}
-.post-content h3 {
-  color: var(--dark-heading-color);
-}
-
 /* TODO: Check if this is needed or not */
 /* 
 img,

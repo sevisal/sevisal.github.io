@@ -7,6 +7,7 @@
   --light-secondary-color: #dddddd;
   --light-tertiary-color: #272822;
   --light-text-color: black;
+  --light-button-color: #163e58
 }
 
 @font-face {
@@ -661,3 +662,103 @@ table td {
 .prev-post, .next-post {
   max-width: 33%;
 }
+
+/* Popup */
+{box-sizing: border-box;}
+
+/* The popup form - hidden by default */
+.form-popup {
+  background-color: white;
+  display: none;
+  position: fixed;
+  position: fixed;
+  width: 500px;
+  height: 550px;
+  top: 20%;
+  left: 50%;
+  margin-top: -100px; /* Negative half of height. */
+  margin-left: -250px; /* Negative half of width. */
+  border: 3px solid #f1f1f1;
+  border-radius: 5px;
+  /* z-index: 9; */
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: white;
+  color: black;
+  padding: 5px 0px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: absolute;
+  outline: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .copy {
+  width: 15%;
+  right:    25%;
+  bottom:   3%;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .download {
+  width:    20%;
+  right:    5%;
+  bottom:   3%;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  max-width: 30px;
+  background-color: white;
+  position: absolute;
+  right:    1%;
+  bottom:   92%;
+  padding: 0px 0px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  background-color: rgba(var(--light-button-color), 1);
+  opacity: 1;
+}
+
+.btn:hover .feather-sun {
+  fill: black;
+  color: black;
+}
+
+.cite-background {
+  color: #7ee9fd;
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  background-color: #44475a;
+  width: 450px;
+  height: 400px;
+  border-radius: 5px;
+}
+
+/* .cite-background div {
+  border: 1px solid black;
+  width: 250px;
+  height: 100px;
+} */

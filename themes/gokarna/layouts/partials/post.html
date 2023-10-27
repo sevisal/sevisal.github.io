@@ -9,13 +9,21 @@
         
         <ul class="post-tags">
             <li class="post-tag"><a href="{{.Params.Link}}">Link</a></li>
-            <li class="post-tag"><a href="{{.Params.Cite}}">Cite</a></li>
+            <li class="post-tag" onclick="openForm()"><a href="" style="pointer-events: none; cursor: pointer;">Cite</a></li>
         </ul>
-        <!-- <ul class="post-tags">
-            tags: {{ range .Params.tags }}
-                <li class="post-tag"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-            {{ end }}
-        </ul> -->
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h2>Cite</h2>
+                <!-- <code>overflow-y:auto</code> -->
+                <div class="cite-background">
+                    {{.Params.Cite}}
+                </div>
+                <button type="copy" class="btn copy"><span data-feather='copy'></span> Copy</button>
+                <!-- <button type="download" class="btn download"><span data-feather='download'></span>Download</button> -->
+                <a href="{{.Site.BaseURL}}/{{.Section}}/{{.Params.Cite}}" download="{{.Params.Cite}}" class="btn download" ><span data-feather='download'></span>Download</a>
+                <button type="button" class="cancel" onclick="closeForm()"><span data-feather='x'></span></button>
+            </form>
+        </div>
     </div>
 
     <div class="post-content">
