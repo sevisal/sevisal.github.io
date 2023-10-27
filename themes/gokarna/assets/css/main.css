@@ -3,6 +3,7 @@
   --container-width: 810px;
 
   --light-primary-color: 255, 255, 255;
+  --light-gradient-color: #dcf1ff;
   --light-secondary-color: #dddddd;
   --light-tertiary-color: #272822;
   --light-text-color: black;
@@ -22,6 +23,7 @@
 
 html {
   background-color: rgb(var(--light-primary-color));
+  background: linear-gradient(180deg, rgb(var(--light-primary-color)) 0%, var(--light-gradient-color) 100%);
   color: var(--light-text-color);
   font-family: "Lato", sans-serif;
   font-size: 17.5px;
@@ -43,9 +45,44 @@ a {
 }
 
 /* This is set in partials/head.html and is populated via config */
-a:hover {
+
+a:link {
+  text-decoration: none;
+}
+.post-content a:link {
+  text-decoration: none;
   color: var(--accent-color);
-  fill: var(--accent-color);
+}
+
+.markdown-content a{
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.post-content a{
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.post-content a:hover{
+  text-decoration: underline;
+}
+
+.list-posts a{
+  text-decoration: none;
+  /* color: var(--accent-color); */
+}
+
+.list-posts a:hover{
+  text-decoration: underline;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 main#content {

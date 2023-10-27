@@ -1,12 +1,16 @@
 :root {
   --dark-primary-color: 34, 39, 46;
+  --dark-gradient-color: #166ca1;
+  --dark-gradient2-color: #163e58;
   --dark-secondary-color: #2d333b;
   --dark-tertiary-color: #646464;
+  --dark-heading-color: #a7a7a7;
   --dark-text-color: white;
 }
 
 html {
   background-color: rgb(var(--dark-primary-color));
+  background: linear-gradient(180deg, rgb(var(--dark-primary-color)) 0%, var(--dark-gradient2-color) 64%, var(--dark-gradient-color) 100%);
   color: var(--dark-text-color);
   fill: var(--dark-text-color);
 }
@@ -85,6 +89,41 @@ pre {
 
 .header-shadow {
   box-shadow: rgb(33, 38, 45) 0px -1px 0px 0px inset;
+}
+
+.markdown-content h1 {
+  color: var(--dark-heading-color);
+}
+
+.markdown-content h2 {
+  color: var(--dark-heading-color);
+}
+
+.markdown-content h3 {
+  color: var(--dark-heading-color);
+}
+
+.home-posts h1 {
+  color: var(--dark-heading-color);
+}
+
+.list-posts h2 {
+  color: var(--dark-heading-color);
+}
+
+.list-posts h3 {
+  color: var(--dark-heading-color);
+}
+
+.post-content h1 {
+  color: var(--dark-heading-color);
+}
+
+.post-content h2 {
+  color: var(--dark-heading-color);
+}
+.post-content h3 {
+  color: var(--dark-heading-color);
 }
 
 /* TODO: Check if this is needed or not */
