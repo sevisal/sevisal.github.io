@@ -757,6 +757,12 @@ table td {
   border-radius: 5px;
 }
 
+iframe,
+object,
+embed {
+  overflow: hidden;
+  position: absolute;
+}
 /* .cite-background div {
   border: 1px solid black;
   width: 250px;
