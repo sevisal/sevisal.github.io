@@ -13,19 +13,18 @@
         </ul>
         <div class="form-popup" id="myForm">
             <form action="/action_page.php" class="form-container">
+                <div id="backgroundOverlay"></div>
                 <h2>Cite</h2>
                 <div>
-                    <embed src="{{ urls.JoinPath .Section .File.BaseFileName | absURL }}.txt" id="citeObject" class="cite-background" type="text/html">
-                        
-                    <!-- <object data="{{.Site.BaseURL}}/{{.Section}}/{{.Params.Cite}}" style="visibility: visible;" class="cite-background" id="citeObject"></object> -->
+                    <embed src="{{ urls.JoinPath .Section .File.BaseFileName | absURL }}.txt" id="citeObject" class="cite-background" type="text/html" style="color:blue;text-align:center">
                 </div>
-                <button type="copy" class="btn copy" onclick="copyCite()"><span data-feather='copy'></span> Copy</button>
-                <a href="{{ urls.JoinPath .Section .File.BaseFileName | absURL }}.bib" download="{{.File.BaseFileName}}.bib" class="btn download" ><span data-feather='download'></span>Download</a>
+                <button type="copy" class="btn copy" onclick="copyCite()"><span data-feather='copy'></span> &nbsp;Copy</button>
+                <a href="{{ urls.JoinPath .Section .File.BaseFileName | absURL }}.bib" download="{{.File.BaseFileName}}.bib" class="btn download" >&nbsp;<span data-feather='download'></span> Download</a>
                 <button type="button" class="cancel" onclick="closeForm()"><span data-feather='x'></span></button>
             </form>
         </div>
     </div>
-
+    
     <div class="post-content">
         <p>
             <div style="text-align: justify"> {{ .Content }} </div>
