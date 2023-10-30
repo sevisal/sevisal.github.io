@@ -1,0 +1,6 @@
+@article{sevilla2022bayesian,
+  title={Bayesian learning of feature spaces for multitasks problems},
+  author={Sevilla-Salcedo, Carlos and Gallardo-Antol{\'\i}n, Ascensi{\'o}n and G{\'o}mez-Verdejo, Vanessa and Parrado-Hern{\'a}ndez, Emilio},
+  journal={arXiv preprint arXiv:2209.03028},
+  year={2022}
+}
