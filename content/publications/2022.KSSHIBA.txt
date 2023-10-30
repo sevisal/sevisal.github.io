@@ -1,0 +1,9 @@
+@article{sevilla2022bayesian,
+  title={Bayesian sparse factor analysis with kernelized observations},
+  author={Sevilla-Salcedo, Carlos and Guerrero-L{\'o}pez, Alejandro and Olmos, Pablo M and G{\'o}mez-Verdejo, Vanessa},
+  journal={Neurocomputing},
+  volume={490},
+  pages={66--78},
+  year={2022},
+  publisher={Elsevier}
+}

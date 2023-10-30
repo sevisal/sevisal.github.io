@@ -1,0 +1,9 @@
+@article{sevilla2021sparse,
+  title={Sparse semi-supervised heterogeneous interbattery bayesian analysis},
+  author={Sevilla-Salcedo, Carlos and Gomez-Verdejo, Vanessa and Olmos, Pablo M},
+  journal={Pattern Recognition},
+  volume={120},
+  pages={108141},
+  year={2021},
+  publisher={Elsevier}
+}

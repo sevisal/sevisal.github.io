@@ -1,0 +1,6 @@
+@article{imani2023multi,
+  title={Multi-Objective Genetic Algorithm for Multi-View Feature Selection},
+  author={Imani, Vandad and Sevilla-Salcedo, Carlos and Fortino, Vittorio and Tohka, Jussi},
+  journal={arXiv preprint arXiv:2305.18352},
+  year={2023}
+}
