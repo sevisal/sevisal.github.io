@@ -15,7 +15,7 @@
             <form action="/action_page.php" class="form-container">
                 <h2>Cite</h2>
                 <div>
-                    <embed src="{{.Site.BaseURL}}/{{.Section}}/{{.Params.Cite}}" id="citeObject" class="cite-background">
+                    <embed src="{{.Site.BaseURL}}/{{.Section}}/{{.Params.Cite}}" id="citeObject" class="cite-background" type="text/html">
                     <!-- <object data="{{.Site.BaseURL}}/{{.Section}}/{{.Params.Cite}}" style="visibility: visible;" class="cite-background" id="citeObject"></object> -->
                 </div>
                 <button type="copy" class="btn copy" onclick="copyCite()"><span data-feather='copy'></span> Copy</button>
