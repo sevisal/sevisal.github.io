@@ -12,7 +12,7 @@ pygmentsStyle = "monokai"
 
 [params]
   footer = ""
-  description = "Postdoctoral researcher in Machine Learning"
+  description = "Machine Learning Researcher"
   avatarURL = "/images/Foto_Profe.jpg"
   AvatarAltText = "avatar"
   avatarSize = "size-m"
