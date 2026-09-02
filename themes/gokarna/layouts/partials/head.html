@@ -47,8 +47,8 @@
     <link id="dark-theme" rel="stylesheet" href="{{ $cssDark.RelPermalink }}">
 
     {{ with resources.Get "css/custom.css" }}
-    {{ $cssCustom := . | minify }}
-    <link rel="stylesheet" type="text/css" href="{{ $cssCustom.RelPermalink }}">
+    {{ $cssCustom := . | minify | resources.Fingerprint "sha256" }}
+    <link rel="stylesheet" type="text/css" href="{{ $cssCustom.RelPermalink }}" integrity="{{ $cssCustom.Data.Integrity }}">
     {{ end }}
 
     {{ $jsBundle := resources.Match "js/**.js" | resources.Concat "js/bundle.js" | minify | resources.Fingerprint "sha256" }}
