@@ -16,6 +16,7 @@ pygmentsStyle = "monokai"
   avatarURL = "/images/Foto_Profe.jpg"
   AvatarAltText = "avatar"
   avatarSize = "size-m"
+  researchHighlights = ["Bayesian ML", "Multimodal learning", "Biomedical data", "Interpretable AI"]
   showPostsOnHomePage = "recent"
   customHeadHTML = """
     <!-- KaTeX -->

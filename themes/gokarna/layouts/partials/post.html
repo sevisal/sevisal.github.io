@@ -1,7 +1,7 @@
 <div class="post container">
     <div class="post-header-section">
         <h1>{{ .Title }}</h1>
-        <small role="doc-subtitle">{{ .Title }}</small>
+        {{ with .Description }}<small role="doc-subtitle">{{ . }}</small>{{ end }}
         <p class="post-date">
             {{ dateFormat "January, 2006" .Date }}{{ if lt .Date .Lastmod }} | Updated {{ dateFormat "January, 2006" .Lastmod }}{{ end }}
         </p>
@@ -12,14 +12,14 @@
             {{ with .Params.Cite }}<li class="post-tag" onclick="openForm()"><a href="" style="pointer-events: none; cursor: pointer;">Cite</a></li>{{ end }}
         </ul>
         {{ with .Params.Cite }}
+            {{ $citeTextPath := printf "content/%s/%s.txt" $.Section $.File.BaseFileName }}
+            {{ $citeTextUrl := printf "%s.txt" (urls.JoinPath $.Section $.File.BaseFileName | absURL) }}
             <div class="form-popup" id="myForm">
-                <form action="/action_page.php" class="form-container">
+                <form class="form-container" onsubmit="return false;">
                     <div id="backgroundOverlay"></div>
                     <h2>Cite</h2>
-                    <div>
-                        <embed src="{{ urls.JoinPath $.Section $.File.BaseFileName | absURL }}.txt" id="citeObject" class="cite-background" type="text/html" style="color:blue;text-align:center">
-                    </div>
-                    <button type="copy" class="btn copy" onclick="copyCite()"><span data-feather='copy'></span> &nbsp;Copy</button>
+                    <pre id="citeObject" class="cite-background cite-text">{{ readFile $citeTextPath }}</pre>
+                    <button type="button" class="btn copy" onclick="copyCite(this, '{{ $citeTextUrl }}')"><span data-feather='copy'></span> &nbsp;<span class="button-label">Copy</span></button>
                     <a href="{{ urls.JoinPath $.Section $.File.BaseFileName | absURL }}.bib" download="{{$.File.BaseFileName}}.bib" class="btn download" >&nbsp;<span data-feather='download'></span> Download</a>
                     <button type="button" class="cancel" onclick="closeForm()"><span data-feather='x'></span></button>
                 </form>

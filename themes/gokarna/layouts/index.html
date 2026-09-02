@@ -10,6 +10,13 @@
     {{ if isset .Site.Params "description" }}
         <h3>{{ .Site.Params.Description }}</h3>
     {{ end }}
+    {{ with .Site.Params.ResearchHighlights }}
+        <ul class="research-highlights" aria-label="Research focus">
+            {{ range . }}
+            <li>{{ . }}</li>
+            {{ end }}
+        </ul>
+    {{ end }}
 
 </section>
 

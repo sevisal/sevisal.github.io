@@ -124,6 +124,7 @@ function toggleTheme(event) {
 
 function setTheme(themeToSet, targets) {
     localStorage.setItem(THEME_PREF_STORAGE_KEY, themeToSet);
+    document.documentElement.dataset.theme = themeToSet;
     darkThemeCss.disabled = themeToSet === 'light';
     targets.forEach((target) => {
         target.querySelector('a').innerHTML = feather.icons[THEME_TO_ICON_CLASS[themeToSet].split('-')[1]].toSvg();
@@ -134,7 +135,43 @@ function setTheme(themeToSet, targets) {
 function openForm() {
     document.getElementById("myForm").style.display = "block";
   }
-  
+
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
   }
+
+async function copyCite(button, citeUrl) {
+    const label = button.querySelector('.button-label');
+    const originalLabel = label ? label.textContent : button.textContent;
+
+    try {
+        let citation = '';
+        const citationText = button.closest('.form-container').querySelector('.cite-text');
+
+        if (citationText !== null) {
+            citation = citationText.textContent;
+        } else {
+            const response = await fetch(citeUrl);
+            if (!response.ok) {
+                throw new Error(`Unable to fetch citation: ${response.status}`);
+            }
+            citation = await response.text();
+        }
+        await navigator.clipboard.writeText(citation.trim());
+
+        if (label) {
+            label.textContent = 'Copied';
+            window.setTimeout(() => {
+                label.textContent = originalLabel;
+            }, 1800);
+        }
+    } catch (error) {
+        console.error(error);
+        if (label) {
+            label.textContent = 'Failed';
+            window.setTimeout(() => {
+                label.textContent = originalLabel;
+            }, 2200);
+        }
+    }
+}
