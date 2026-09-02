@@ -361,11 +361,36 @@ main#content > .container,
 
 @media only screen and (max-width: 820px) {
   main#content {
-    margin-top: 76px;
+    margin-top: 68px;
+  }
+
+  .home-about {
+    margin-bottom: 1rem;
+  }
+
+  .home-about .avatar img {
+    height: 6.4rem;
+    width: 6.4rem;
   }
 
   .home-about h1 {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
+    margin-top: 1rem;
+  }
+
+  .home-about h3 {
+    font-size: 0.98rem;
+  }
+
+  .research-highlights {
+    gap: 0.4rem;
+    margin-top: 0.85rem;
+    max-width: 18rem;
+  }
+
+  .research-highlights li {
+    font-size: 0.72rem;
+    padding: 0.38rem 0.52rem;
   }
 
   .markdown-content,
@@ -373,11 +398,17 @@ main#content > .container,
     padding: 0 1rem;
   }
 
+  .markdown-content > div,
+  .post-content > p > div {
+    text-align: left !important;
+  }
+
   .markdown-content h1,
   .post-header-section h1,
   .home-posts h1,
   .list-posts .list-title {
     font-size: 1.55rem;
+    margin-top: 1.65rem;
   }
 
   .list-posts .post-title {
