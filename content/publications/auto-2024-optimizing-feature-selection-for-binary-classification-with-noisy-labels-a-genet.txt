@@ -1,0 +1,1 @@
+Vandad Imani, Carlos SEVILLA SALCEDO, Elaheh Moradi, Vittorio Fortino, Jussi Tohka (2024). Optimizing Feature Selection for Binary Classification with Noisy Labels: A Genetic Algorithm Approach. International Conference on Advances in Computing Research 2024.

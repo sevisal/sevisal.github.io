@@ -1,0 +1,1 @@
+Alejandro L. García-Navarro, Carlos Sevilla-Salcedo, Belén Rodríguez-Sánchez, Vanessa Gómez-Verdejo (2026). Biologically Informed Representation Learning for Robust Cross-Center Generalization of MALDI-TOF Mass Spectrometry.

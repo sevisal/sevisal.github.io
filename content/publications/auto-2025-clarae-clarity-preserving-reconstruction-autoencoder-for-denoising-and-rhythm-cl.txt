@@ -1,0 +1,1 @@
+Long Lin, Pablo Peiro-Corbacho, Pablo Ávila, Alejandro Carta-Bergaz, Ángel Arenal, Gonzalo R. Ríos-Muñoz, Carlos Sevilla-Salcedo (2025). CLARAE: Clarity Preserving Reconstruction AutoEncoder for Denoising and Rhythm Classification of Intracardiac Electrograms.

@@ -8,21 +8,23 @@
         <small role="post-state"><i>{{ .Params.state }}</i></small>
         
         <ul class="post-tags">
-            <li class="post-tag"><a href="{{.Params.Link}}">Link</a></li>
-            <li class="post-tag" onclick="openForm()"><a href="" style="pointer-events: none; cursor: pointer;">Cite</a></li>
+            {{ with .Params.Link }}<li class="post-tag"><a href="{{ . }}">Link</a></li>{{ end }}
+            {{ with .Params.Cite }}<li class="post-tag" onclick="openForm()"><a href="" style="pointer-events: none; cursor: pointer;">Cite</a></li>{{ end }}
         </ul>
-        <div class="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
-                <div id="backgroundOverlay"></div>
-                <h2>Cite</h2>
-                <div>
-                    <embed src="{{ urls.JoinPath .Section .File.BaseFileName | absURL }}.txt" id="citeObject" class="cite-background" type="text/html" style="color:blue;text-align:center">
-                </div>
-                <button type="copy" class="btn copy" onclick="copyCite()"><span data-feather='copy'></span> &nbsp;Copy</button>
-                <a href="{{ urls.JoinPath .Section .File.BaseFileName | absURL }}.bib" download="{{.File.BaseFileName}}.bib" class="btn download" >&nbsp;<span data-feather='download'></span> Download</a>
-                <button type="button" class="cancel" onclick="closeForm()"><span data-feather='x'></span></button>
-            </form>
-        </div>
+        {{ with .Params.Cite }}
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <div id="backgroundOverlay"></div>
+                    <h2>Cite</h2>
+                    <div>
+                        <embed src="{{ urls.JoinPath $.Section $.File.BaseFileName | absURL }}.txt" id="citeObject" class="cite-background" type="text/html" style="color:blue;text-align:center">
+                    </div>
+                    <button type="copy" class="btn copy" onclick="copyCite()"><span data-feather='copy'></span> &nbsp;Copy</button>
+                    <a href="{{ urls.JoinPath $.Section $.File.BaseFileName | absURL }}.bib" download="{{$.File.BaseFileName}}.bib" class="btn download" >&nbsp;<span data-feather='download'></span> Download</a>
+                    <button type="button" class="cancel" onclick="closeForm()"><span data-feather='x'></span></button>
+                </form>
+            </div>
+        {{ end }}
     </div>
     
     <div class="post-content">

@@ -5,6 +5,7 @@ languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
+buildFuture = true
 
 # Choose one of emacs, trac or perldoc
 pygmentsStyle = "monokai"
@@ -52,9 +53,9 @@ pygmentsStyle = "monokai"
     weight = 2
 
   [[menu.main]]
-    name = "Teaching"
+    name = "Projects"
     pre = "<span data-feather='briefcase'></span>"
-    url = "/teaching/"
+    url = "/projects/"
     weight = 4
 
   [[menu.main]]

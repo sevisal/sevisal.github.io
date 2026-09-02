@@ -1,0 +1,1 @@
+Daniel Fernández-Sánchez, Carlos Sevilla salcedo, Vanessa Gómez Verdejo, Daniel Hernández-Lobato (2026). Impact of evaluation noise in the context of multi-objective Bayesian optimization with the intrinsic coregionalization model. Neurocomputing.

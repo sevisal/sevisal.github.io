@@ -1,0 +1,1 @@
+Aras Erarslan, Carlos Sevilla Salcedo, Ville Tanskanen, Anni Nisov, Eero Päiväkumpu, Heikki Aisala, Kaisu Honkapää, Arto Klami, Petrus Mikkola (2025). Consecutive Preferential Bayesian Optimization.

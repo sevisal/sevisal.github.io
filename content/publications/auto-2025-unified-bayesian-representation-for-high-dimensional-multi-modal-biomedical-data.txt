@@ -1,0 +1,1 @@
+Albert Belenguer-Llorens, Carlos Sevilla-Salcedo, Jussi Tohka, Vanessa Gómez-Verdejo (2025). Unified Bayesian representation for high-dimensional multi-modal biomedical data for small-sample classification. Engineering Applications of Artificial Intelligence.
