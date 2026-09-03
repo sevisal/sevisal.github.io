@@ -342,7 +342,7 @@ main#content > .container,
 }
 
 .project-card dd {
-  color: var(--site-heading);
+  color: inherit;
   font-size: 0.86rem;
   line-height: 1.25;
   margin: 0;
