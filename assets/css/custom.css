@@ -208,8 +208,15 @@ main#content > .container,
   padding-bottom: 0;
 }
 
-.people-panel span,
+.people-panel span {
+  color: var(--site-muted);
+}
+
 .contact-panel {
+  color: inherit;
+}
+
+.contact-panel strong {
   color: var(--site-muted);
 }
 
@@ -228,6 +235,10 @@ main#content > .container,
 .contact-details {
   display: grid;
   gap: 0.9rem;
+}
+
+.contact-address {
+  text-align: left;
 }
 
 .markdown-content a,
