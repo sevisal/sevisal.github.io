@@ -411,6 +411,12 @@ main#content > .container,
   transition: background-color 0.18s ease, color 0.18s ease;
 }
 
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .post-tags .post-tag:hover {
   background-color: var(--site-chip-bg);
   color: var(--site-modal-text);
@@ -597,9 +603,7 @@ main#content > .container,
   }
 
   .post-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
+    gap: 6px;
   }
 
   .form-popup {
