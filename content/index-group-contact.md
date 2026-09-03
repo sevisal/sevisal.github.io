@@ -6,13 +6,16 @@ I supervise and co-supervise PhD projects around probabilistic machine learning,
   <section class="people-panel">
     <h3>Current PhD students</h3>
     <ul>
-      <li><strong>To be updated.</strong></li>
+      <li><strong><a href="https://luciaschmidtsantiago.github.io/">Lucía Schmidt Santiago</a></strong></li>
+      <li><strong><a href="https://scholar.google.com/citations?user=HfI--hgAAAAJ&hl=es">Long Lin</a></strong></li>
+      <li><strong>Lucía González Zamorano</strong></li>
+      <li><strong>Nuria Balbás Esteban</strong></li>
     </ul>
   </section>
   <section class="people-panel">
     <h3>Former PhD students</h3>
     <ul>
-      <li><strong>To be updated.</strong></li>
+      <li><strong><a href="https://hest.ethz.ch/en/department/people/organisational-units/institute-translational-medicine/institute-itm-a-z/personen-detail.MzY3OTMx.TGlzdC8yNzI5LC0xNDQ0NDAzNDQz.html">Albert Belenguer Llorens</a></strong></li>
     </ul>
   </section>
 </div>
