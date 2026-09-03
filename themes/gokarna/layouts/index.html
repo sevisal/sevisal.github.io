@@ -61,4 +61,10 @@
     </div>
 
 {{ end }}
+
+{{ if os.FileExists "index-group-contact.md" }}
+<div class="markdown-content">
+    <div style="text-align: justify"> {{ readFile "index-group-contact.md" | markdownify }} </div>
+</div>
+{{ end }}
 {{ end }}
