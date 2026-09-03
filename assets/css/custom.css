@@ -596,6 +596,12 @@ main#content > .container,
     margin: 0.45rem 0 0;
   }
 
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
   .form-popup {
     box-sizing: border-box;
     left: 1rem;

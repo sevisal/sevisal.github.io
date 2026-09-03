@@ -128,13 +128,24 @@ def parse_projects(profile_url: str, html_text: str) -> list[Project]:
     return projects
 
 
-def project_line(project: Project) -> str:
-    title = project.title.replace("[", r"\[").replace("]", r"\]")
-    detail = f"{project.role}."
-    if project.funder:
-        detail += f" {project.funder}."
-    detail += f" {project.year_range}."
-    return f"- **[{title}]({project.url})**  \n  {detail}"
+def project_card(project: Project) -> str:
+    title = html.escape(project.title)
+    url = html.escape(project.url, quote=True)
+    role = html.escape(project.role)
+    funder = html.escape(project.funder) if project.funder else "n.d."
+    duration = html.escape(project.year_range)
+    return "\n".join(
+        [
+            '<div class="project-card">',
+            f'  <h4><a href="{url}">{title}</a></h4>',
+            "  <dl>",
+            f"    <div><dt>Role</dt><dd>{role}</dd></div>",
+            f"    <div><dt>Funder</dt><dd>{funder}</dd></div>",
+            f"    <div><dt>Duration</dt><dd>{duration}</dd></div>",
+            "  </dl>",
+            "</div>",
+        ]
+    )
 
 
 def write_projects(projects: list[Project], output: Path, year: int) -> None:
@@ -159,10 +170,10 @@ def write_projects(projects: list[Project], output: Path, year: int) -> None:
         "",
     ]
     for project in ongoing:
-        lines.extend([project_line(project), ""])
+        lines.extend([project_card(project), ""])
     lines.extend(["", "### Completed", ""])
     for project in completed:
-        lines.extend([project_line(project), ""])
+        lines.extend([project_card(project), ""])
     output.write_text("\n".join(lines), encoding="utf-8")
 
 
