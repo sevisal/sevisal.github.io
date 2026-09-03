@@ -37,7 +37,7 @@
 {{ end }}
 
 {{ if os.FileExists "index-about.md" }}
-<div class="markdown-content">
+<div class="markdown-content about-content">
     <div style="text-align: justify"> {{ readFile "index-about.md" | markdownify }} </div>
 </div>
 {{ end }}
@@ -63,7 +63,7 @@
 {{ end }}
 
 {{ if os.FileExists "index-group-contact.md" }}
-<div class="markdown-content">
+<div class="markdown-content group-contact-content">
     <div style="text-align: justify"> {{ readFile "index-group-contact.md" | markdownify }} </div>
 </div>
 {{ end }}
