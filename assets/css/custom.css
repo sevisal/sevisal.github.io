@@ -14,6 +14,12 @@
   --site-chip-bg: rgba(44, 111, 126, 0.1);
   --site-chip-border: rgba(44, 111, 126, 0.28);
   --site-chip-text: #245d6a;
+  --site-chip-published-bg: rgba(37, 126, 91, 0.12);
+  --site-chip-published-border: rgba(37, 126, 91, 0.34);
+  --site-chip-published-text: #1f6a4d;
+  --site-chip-review-bg: rgba(149, 111, 42, 0.14);
+  --site-chip-review-border: rgba(149, 111, 42, 0.34);
+  --site-chip-review-text: #78591f;
   --site-link-contrast: #245d6a;
   --site-modal-bg: rgba(249, 247, 242, 0.98);
   --site-modal-text: #26343a;
@@ -37,6 +43,12 @@ html[data-theme="dark"] {
   --site-chip-bg: rgba(116, 199, 211, 0.12);
   --site-chip-border: rgba(116, 199, 211, 0.34);
   --site-chip-text: #d7f4f7;
+  --site-chip-published-bg: rgba(86, 190, 136, 0.16);
+  --site-chip-published-border: rgba(86, 190, 136, 0.38);
+  --site-chip-published-text: #b8f0d1;
+  --site-chip-review-bg: rgba(229, 184, 103, 0.16);
+  --site-chip-review-border: rgba(229, 184, 103, 0.38);
+  --site-chip-review-text: #f0d59d;
   --site-link-contrast: #f0f6f8;
   --site-modal-bg: rgba(32, 38, 45, 0.98);
   --site-modal-text: #f4fbfc;
@@ -71,6 +83,15 @@ body {
 .nav-title a:hover {
   color: var(--accent-color);
   text-decoration: none;
+}
+
+.nav-link a .nav-scholar-icon {
+  color: currentColor;
+  height: 24px;
+  margin: -5px auto;
+  stroke-width: 1.75;
+  vertical-align: middle;
+  width: 24px;
 }
 
 main#content {
@@ -193,9 +214,11 @@ main#content > .container,
 }
 
 .people-panel li {
+  align-items: center;
   border-top: 1px solid var(--site-soft-border);
-  display: grid;
-  gap: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
   padding: 0.75rem 0;
 }
 
@@ -210,6 +233,70 @@ main#content > .container,
 
 .people-panel span {
   color: var(--site-muted);
+}
+
+.people-panel strong {
+  min-width: 0;
+}
+
+.profile-links {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 0.4rem;
+}
+
+.people-panel .profile-link,
+.people-panel .profile-link:link,
+.people-panel .profile-link:visited,
+.people-panel .profile-link:active {
+  align-items: center;
+  border: 1px solid var(--site-chip-border);
+  border-radius: 999px;
+  color: var(--site-chip-text);
+  display: inline-flex;
+  height: 1.45rem;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+  width: 1.45rem;
+}
+
+.people-panel .profile-link:visited,
+.people-panel .profile-link:active {
+  border-color: var(--site-chip-border);
+  color: var(--site-chip-text);
+}
+
+.people-panel .profile-link:hover {
+  background: var(--site-chip-bg);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.profile-link svg {
+  height: 0.82rem;
+  stroke-width: 1.75;
+  width: 0.82rem;
+}
+
+.profile-link .scholar-icon {
+  color: currentColor;
+  height: 1rem;
+  stroke-width: 1.85;
+  width: 1rem;
+}
+
+.people-panel .profile-link-orcid,
+.people-panel .profile-link-orcid:link,
+.people-panel .profile-link-orcid:visited,
+.people-panel .profile-link-orcid:active {
+  color: #2c9d55;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .contact-panel {
@@ -291,11 +378,30 @@ main#content > .container,
   min-width: 0;
 }
 
-.post-title .post-date {
+.post-title .post-meta {
+  align-items: baseline;
   color: var(--site-muted);
+  display: flex;
+  flex-wrap: wrap;
   font-size: 0.82rem;
   font-weight: 700;
+  gap: 0.35rem;
+  line-height: 1.25;
+}
+
+.post-title .post-date {
+  color: var(--site-muted);
+}
+
+.post-title .post-meta-separator {
+  color: var(--site-heading);
+  font-size: 1.15em;
   line-height: 1;
+}
+
+.post-title .post-venue {
+  color: var(--site-muted);
+  min-width: 0;
 }
 
 .project-card {
@@ -381,6 +487,20 @@ main#content > .container,
 
 [role="post-state"] i {
   font-style: normal;
+}
+
+.post-title .post-state-published,
+[role="post-state"].post-state-published {
+  background: var(--site-chip-published-bg);
+  border-color: var(--site-chip-published-border);
+  color: var(--site-chip-published-text);
+}
+
+.post-title .post-state-under-review,
+[role="post-state"].post-state-under-review {
+  background: var(--site-chip-review-bg);
+  border-color: var(--site-chip-review-border);
+  color: var(--site-chip-review-text);
 }
 
 .post-content h3 {
@@ -569,6 +689,12 @@ main#content > .container,
   .markdown-content > div,
   .post-content > p > div {
     text-align: left !important;
+  }
+
+  .about-content > div,
+  .group-contact-content > div {
+    hyphens: auto;
+    text-align: justify !important;
   }
 
   .markdown-content h1,

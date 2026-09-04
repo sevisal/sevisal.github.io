@@ -1,5 +1,5 @@
 ---
-title: "Automatic surveillance ofEscherichia colibacteriological strains within clinical settings"
+title: "Automatic surveillance of Escherichia coli bacteriological strains within clinical settings"
 date: 2024-11-05
 description: "Under review"
 tags: ["Paper"]

@@ -45,6 +45,16 @@ PUBLISHED_OVERRIDES = {
     },
 }
 
+METADATA_OVERRIDES = {
+    "171071327": {
+        "title": "Automatic surveillance of Escherichia coli bacteriological strains within clinical settings",
+    },
+}
+
+FILENAME_OVERRIDES = {
+    "171071327": "auto-2024-automatic-surveillance-ofescherichia-colibacteriological-strains-within-clinical",
+}
+
 
 @dataclass
 class Work:
@@ -370,8 +380,16 @@ def promote_preprint(work: Work) -> Work:
     if override:
         for field_name, field_value in override.items():
             setattr(work, field_name, field_value)
-        return work
-    return find_published_version(work) or work
+        return apply_metadata_overrides(work)
+    return apply_metadata_overrides(find_published_version(work) or work)
+
+
+def apply_metadata_overrides(work: Work) -> Work:
+    override = METADATA_OVERRIDES.get(work.put_code)
+    if override:
+        for field_name, field_value in override.items():
+            setattr(work, field_name, field_value)
+    return work
 
 
 def arxiv_text(entry: ET.Element, name: str) -> str:
@@ -496,7 +514,7 @@ def parse_work(work: dict) -> Work | None:
     if not title:
         return None
     year, month, day = publication_date(work.get("publication-date"))
-    return Work(
+    return apply_metadata_overrides(Work(
         put_code=str(work.get("put-code", "")),
         title=title,
         year=year,
@@ -508,7 +526,7 @@ def parse_work(work: dict) -> Work | None:
         url=value(work.get("url")),
         authors=contributors_from(work),
         source="orcid",
-    )
+    ))
 
 
 def replace_front_matter_field(front_matter: str, key: str, value_text: str) -> str:
@@ -566,6 +584,62 @@ def manual_publications(publications_dir: Path) -> dict[str, ManualPublication]:
     return titles
 
 
+def existing_generated_works(publications_dir: Path) -> list[Work]:
+    works: list[Work] = []
+    for path in publications_dir.glob("*.md"):
+        if not path.name.startswith(("orcid-", "auto-")):
+            continue
+        text = path.read_text(encoding="utf-8")
+        if front_matter_value(text, "auto_generated").lower() != "true":
+            continue
+
+        title = front_matter_value(text, "title")
+        date = front_matter_value(text, "date")
+        link = front_matter_value(text, "link")
+        source_id = front_matter_value(text, "source_id") or path.stem
+        state = front_matter_value(text, "state")
+        source = front_matter_value(text, "source") or "auto"
+        description = front_matter_value(text, "description")
+        if not title or not date:
+            continue
+
+        year, month, day = (date.split("-") + ["", "", ""])[:3]
+        journal = ""
+        if description.startswith("Published in "):
+            journal = description.removeprefix("Published in ").strip()
+        venue_match = re.search(r"^\*\*Venue:\*\*\s*(.+)$", text, re.MULTILINE)
+        if venue_match:
+            journal = venue_match.group(1).strip()
+
+        doi = ""
+        doi_match = re.search(r"(?:https?://(?:dx\.)?doi\.org/)?(10\.\S+)", link)
+        if doi_match:
+            doi = doi_match.group(1)
+
+        authors: list[str] = []
+        authors_match = re.search(r"^\*\*Authors:\*\*\s*(.+)$", text, re.MULTILINE)
+        if authors_match:
+            authors = [author.strip() for author in authors_match.group(1).split(",") if author.strip()]
+
+        work_type = "journal-article" if state == "Published" else "preprint"
+        works.append(
+            Work(
+                put_code=source_id,
+                title=title,
+                year=year,
+                month=month,
+                day=day,
+                work_type=work_type,
+                journal=journal,
+                doi=doi,
+                url=link if not doi else "",
+                authors=authors,
+                source=source,
+            )
+        )
+    return works
+
+
 def remove_previous_generated(publications_dir: Path) -> None:
     for pattern in ("orcid-*.*", "auto-*.*"):
         for path in publications_dir.glob(pattern):
@@ -573,7 +647,7 @@ def remove_previous_generated(publications_dir: Path) -> None:
 
 
 def write_work(publications_dir: Path, work: Work, weight: int, orcid_id: str) -> None:
-    filename_base = f"auto-{work.year or 'undated'}-{slugify(work.title)}"
+    filename_base = FILENAME_OVERRIDES.get(work.put_code, f"auto-{work.year or 'undated'}-{slugify(work.title)}")
     state = publication_state(work)
     if state == "Published" and work.journal:
         description = f"Published in {work.journal}"
@@ -633,6 +707,7 @@ def sync(orcid_id: str, publications_dir: Path, author_name: str, arxiv_max_resu
             works.append(max(promoted, key=publication_rank))
     works.extend(fetch_arxiv_works(author_name, arxiv_max_results))
     works.extend(fetch_crossref_author_works(author_name, crossref_rows, crossref_from_year))
+    works.extend(existing_generated_works(publications_dir))
 
     manual_pages = manual_publications(publications_dir)
     unique: dict[str, Work] = {}
@@ -662,7 +737,7 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent(
             """\
-            The script only deletes files named orcid-* inside the target directory.
+            The script only deletes files named orcid-* or auto-* inside the target directory.
             ORCID is prioritized as the source of truth for your curated work
             list. arXiv is queried by exact author match to catch preprints not
             yet listed in ORCID. Crossref is queried to discover or promote

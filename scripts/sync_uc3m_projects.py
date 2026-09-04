@@ -7,6 +7,8 @@ import argparse
 import datetime as dt
 import html
 import re
+import ssl
+import sys
 import urllib.error
 import urllib.request
 from dataclasses import dataclass
@@ -44,6 +46,16 @@ def fetch_html(url: str) -> str:
             body = response.read()
     except urllib.error.HTTPError as exc:
         raise RuntimeError(f"UC3M request failed: {exc.code} {url}") from exc
+    except urllib.error.URLError as exc:
+        if not isinstance(exc.reason, ssl.SSLCertVerificationError):
+            raise
+        print(
+            "Warning: UC3M certificate verification failed; retrying without certificate verification.",
+            file=sys.stderr,
+        )
+        context = ssl._create_unverified_context()
+        with urllib.request.urlopen(request, timeout=30, context=context) as response:
+            body = response.read()
 
     decoded = body.decode("utf-8", errors="replace")
     if "\ufffd" in decoded:
