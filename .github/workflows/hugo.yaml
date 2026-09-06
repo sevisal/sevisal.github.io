@@ -75,7 +75,7 @@ jobs:
           connection_url: ${{ env.MAIL_CONNECTION }}
           subject: "Academic profile updated on sevisal.github.io"
           to: "casevill@ing.uc3m.es"
-          from: "GitHub Actions <casevill@ing.uc3m.es>"
+          from: "GitHub Actions <ssevisal@gmail.es>"
           body: |
             The academic profile sync found updates and committed them to sevisal.github.io.
 
