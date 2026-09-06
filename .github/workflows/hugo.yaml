@@ -37,6 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.115.4
+      MAIL_CONNECTION: ${{ secrets.MAIL_CONNECTION }}
     steps:
       - name: Install Hugo CLI
         run: |
@@ -58,10 +59,29 @@ jobs:
       - name: Sync projects from UC3M
         run: python scripts/sync_uc3m_projects.py
       - name: Commit updated academic profile
-        uses: stefanzweifel/git-auto-commit-action@v5
+        id: auto-commit
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "Sync academic profile from ORCID, arXiv, Crossref, and UC3M"
           file_pattern: "content/publications/* content/projects/_index.md"
+      - name: Warn if email notification is not configured
+        if: steps.auto-commit.outputs.changes_detected == 'true' && env.MAIL_CONNECTION == ''
+        run: |
+          echo "::warning::Academic profile updates were committed, but MAIL_CONNECTION is not configured. Add this repository secret to send email notifications."
+      - name: Email academic profile update notification
+        if: steps.auto-commit.outputs.changes_detected == 'true' && env.MAIL_CONNECTION != ''
+        uses: dawidd6/action-send-mail@v18
+        with:
+          connection_url: ${{ env.MAIL_CONNECTION }}
+          subject: "Academic profile updated on sevisal.github.io"
+          to: "casevill@ing.uc3m.es"
+          from: "GitHub Actions <casevill@ing.uc3m.es>"
+          body: |
+            The academic profile sync found updates and committed them to sevisal.github.io.
+
+            Commit: ${{ steps.auto-commit.outputs.commit_hash }}
+            Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            Website: https://sevisal.github.io/
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
