@@ -85,13 +85,21 @@ body {
   text-decoration: none;
 }
 
-.nav-link a .nav-scholar-icon {
+.nav-link a .nav-scholar-icon,
+.nav-hamburger-list a .nav-scholar-icon {
   color: currentColor;
-  height: 24px;
-  margin: -5px auto;
-  stroke-width: 1.75;
+  height: 22px;
+  margin: -4px auto;
+  stroke-width: 1.5;
   vertical-align: middle;
-  width: 24px;
+  width: 22px;
+}
+
+.social-icons-list .social-icon svg {
+  height: 22px;
+  max-height: 22px;
+  max-width: 22px;
+  width: 22px;
 }
 
 main#content {
