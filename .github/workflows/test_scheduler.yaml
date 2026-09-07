@@ -2,7 +2,7 @@ name: Test scheduler
 
 on:
   schedule:
-    - cron: "05 15 * * *"
+    - cron: "12 9 * * *"
       timezone: "Europe/Madrid"
   workflow_dispatch:
 
