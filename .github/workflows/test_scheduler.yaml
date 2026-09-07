@@ -1,0 +1,17 @@
+name: Test scheduler
+
+on:
+  schedule:
+    - cron: "05 15 * * *"
+      timezone: "Europe/Madrid"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show trigger
+        run: |
+          echo "Triggered!"
+          date -u
+          echo "Event: ${{ github.event_name }}"
