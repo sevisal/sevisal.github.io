@@ -1,17 +1,19 @@
 ---
 title: "Bayesian Integration of Nonlinear Incomplete Clinical Data"
-date: 2026-02-02
-description: "Under review"
+date: 2026-01-01
+description: "Published in IEEE Journal of Biomedical and Health Informatics"
 tags: ["Paper"]
-link: https://doi.org/10.48550/arXiv.2602.01924
+link: https://doi.org/10.1109/jbhi.2026.3730983
 cite: auto-2026-bayesian-integration-of-nonlinear-incomplete-clinical-data.bib
-state: Under review
+state: Published
 type: post
 weight: 14
 showTableOfContents: true
 auto_generated: true
 source_id: arxiv:2602.01924
-source: arxiv
+source: crossref
 ---
 
-**Authors:** Lucía González-Zamorano, Nuria Balbás-Esteban, Vanessa Gómez-Verdejo, Albert Belenguer-Llorens, Carlos Sevilla-Salcedo
+**Authors:** Lucia Gonzalez-Zamorano, Nuria Balbas-Esteban, Vanessa Gomez-Verdejo, Albert Belenguer-Llorens, Carlos Sevilla-Salcedo
+
+**Venue:** IEEE Journal of Biomedical and Health Informatics
