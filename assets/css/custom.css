@@ -104,8 +104,8 @@ body {
 }
 
 .profile-link .user-icon svg {
-  color: white;
-  stroke-width: 1.0 !important;
+  color: currentColor;
+  stroke-width: 2.2 !important;
 }
 
 .social-icons-list .social-icon svg {
