@@ -133,7 +133,7 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "sevisal.github.io workflow status — ${{ github.event_name }}"
           to: "casevill@ing.uc3m.es"
-          from: "GitHub Actions <ssevisal@gmail.com>"
+          from: "GitHub Actions <${{ secrets.MAIL_USERNAME }}>"
           body: |
             The sevisal.github.io workflow ran.
 
