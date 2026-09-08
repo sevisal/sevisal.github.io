@@ -88,11 +88,11 @@ body {
 .nav-link a .nav-scholar-icon,
 .nav-hamburger-list a .nav-scholar-icon {
   color: currentColor;
-  height: 22px;
+  height: 24px;
   margin: -4px auto;
-  stroke-width: 1.5;
+  stroke-width: 1.3;
   vertical-align: middle;
-  width: 22px;
+  width: 24px;
 }
 
 .social-icons-list .social-icon svg {
