@@ -126,7 +126,11 @@ jobs:
         continue-on-error: true
         uses: dawidd6/action-send-mail@v18
         with:
-          connection_url: ${{ env.MAIL_CONNECTION }}
+          server_address: smtp.gmail.com
+          server_port: 587
+          secure: false
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
           subject: "sevisal.github.io workflow status — ${{ github.event_name }}"
           to: "casevill@ing.uc3m.es"
           from: "GitHub Actions <ssevisal@gmail.com>"
