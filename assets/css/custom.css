@@ -109,6 +109,10 @@ body {
   stroke-width: 2.2 !important;
 }
 
+.people-panel .profile-link .user-icon {
+  color: inherit;
+}
+
 .social-icons-list .social-icon svg {
   height: 22px;
   max-height: 22px;

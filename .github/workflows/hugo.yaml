@@ -9,7 +9,7 @@ on:
 
   # Primary weekly sync + delayed-run fallback
   schedule:
-    - cron: "58 11 * * 2"
+    - cron: "56 12 * * 2"
       timezone: "Europe/Madrid"
     - cron: "41 6 * * 3"
       timezone: "Europe/Madrid"
@@ -61,17 +61,17 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: |
-          # Pushes, manual runs, and the Monday schedule run the sync normally.
+          # Pushes, manual runs, and the Tuesday schedule run the sync normally.
           echo "run_sync=true" >> "$GITHUB_OUTPUT"
           echo "reason=Primary/manual/push run" >> "$GITHUB_OUTPUT"
 
-          # The Tuesday cron is only a fallback.
-          if [[ "$EVENT_NAME" == "schedule" && "$EVENT_SCHEDULE" == "41 8 * * 2" ]]; then
+          # The Wednesday cron is only a fallback.
+          if [[ "$EVENT_NAME" == "schedule" && "$EVENT_SCHEDULE" == "41 6 * * 3" ]]; then
             SINCE_UTC="$(date -u -d 'yesterday 00:00' +%Y-%m-%dT%H:%M:%SZ)"
 
-            echo "Tuesday fallback check."
+            echo "Wednesday fallback check."
             echo "Looking for a successful scheduled run of this workflow since ${SINCE_UTC}."
-            echo "This also catches a Monday job that GitHub delayed until Tuesday."
+            echo "This also catches a Tuesday job that GitHub delayed until Wednesday."
 
             SUCCESSFUL_PRIMARY_RUNS="$(
               gh api \
@@ -84,10 +84,10 @@ jobs:
 
             if [[ "${SUCCESSFUL_PRIMARY_RUNS}" -gt 0 ]]; then
               echo "run_sync=false" >> "$GITHUB_OUTPUT"
-              echo "reason=Tuesday fallback skipped: Monday scheduled run succeeded" >> "$GITHUB_OUTPUT"
+              echo "reason=Wednesday fallback skipped: Tuesday scheduled run succeeded" >> "$GITHUB_OUTPUT"
             else
               echo "run_sync=true" >> "$GITHUB_OUTPUT"
-              echo "reason=Tuesday fallback executed: no successful Monday scheduled run found" >> "$GITHUB_OUTPUT"
+              echo "reason=Wednesday fallback executed: no successful Tuesday scheduled run found" >> "$GITHUB_OUTPUT"
             fi
           fi
 
