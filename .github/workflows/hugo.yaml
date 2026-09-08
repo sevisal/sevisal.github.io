@@ -129,7 +129,7 @@ jobs:
           connection_url: ${{ env.MAIL_CONNECTION }}
           subject: "sevisal.github.io workflow status — ${{ github.event_name }}"
           to: "casevill@ing.uc3m.es"
-          from: "GitHub Actions <ssevisal@gmail.es>"
+          from: "GitHub Actions <ssevisal@gmail.com>"
           body: |
             The sevisal.github.io workflow ran.
 
