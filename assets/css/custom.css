@@ -105,6 +105,7 @@ body {
 
 .profile-link .user-icon svg {
   color: currentColor;
+  stroke: currentColor;
   stroke-width: 2.2 !important;
 }
 
