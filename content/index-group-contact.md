@@ -13,7 +13,7 @@ Prospective PhD students interested in interpretable machine learning for biomed
         <span class="profile-links" aria-label="Profiles for Lucía Schmidt Santiago">
           <a class="profile-link profile-link-orcid" href="https://orcid.org/0009-0005-5754-4441" aria-label="Lucía Schmidt Santiago ORCID" title="ORCID">iD</a>
           <a class="profile-link" href="https://scholar.google.es/citations?user=zE24E20AAAAJ&hl=es&oi=ao" aria-label="Lucía Schmidt Santiago Google Scholar" title="Google Scholar"><img class="svg-inject scholar-icon" src="/svg/icons/mortarboard-simple.svg" alt="" /></a>
-          <a class="profile-link" href="https://luciaschmidtsantiago.github.io/" aria-label="Lucía Schmidt Santiago personal webpage" title="Personal webpage"><span data-feather="user"></span></a>
+          <a class="profile-link" href="https://luciaschmidtsantiago.github.io/" aria-label="Lucía Schmidt Santiago personal webpage" title="Personal webpage"><span class="user-icon"><i data-feather="user"></i></span></a>
         </span>
       </li>
       <li>
@@ -46,7 +46,7 @@ Prospective PhD students interested in interpretable machine learning for biomed
         <strong>Albert Belenguer Llorens</strong>
         <span class="profile-links" aria-label="Profiles for Albert Belenguer Llorens">
           <a class="profile-link profile-link-orcid" href="https://orcid.org/0000-0003-4252-8826" aria-label="Albert Belenguer Llorens ORCID" title="ORCID">iD</a>
-          <a class="profile-link" href="https://bmds.ethz.ch/team/people/profile.MzY3OTMx.TGlzdC81MDQ5LDQxNjI0NTQ2OA==.html" aria-label="Albert Belenguer Llorens personal webpage" title="Personal webpage"><span data-feather="user"></span></a>
+          <a class="profile-link" href="https://bmds.ethz.ch/team/people/profile.MzY3OTMx.TGlzdC81MDQ5LDQxNjI0NTQ2OA==.html" aria-label="Albert Belenguer Llorens personal webpage" title="Personal webpage"><span class="user-icon"><i data-feather="user"></i></span></a>
         </span>
       </li>
     </ul>
