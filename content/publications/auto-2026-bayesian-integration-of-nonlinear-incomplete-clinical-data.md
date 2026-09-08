@@ -10,10 +10,10 @@ type: post
 weight: 11
 showTableOfContents: true
 auto_generated: true
-source_id: crossref:10.1109/jbhi.2026.3730983
-source: crossref
+source_id: arxiv:2602.01924
+source: arxiv
 ---
 
-**Authors:** Lucia Gonzalez-Zamorano, Nuria Balbas-Esteban, Vanessa Gomez-Verdejo, Albert Belenguer-Llorens, Carlos Sevilla-Salcedo
+**Authors:** Lucía González-Zamorano, Nuria Balbás-Esteban, Vanessa Gómez-Verdejo, Albert Belenguer-Llorens, Carlos Sevilla-Salcedo
 
 **Venue:** IEEE Journal of Biomedical and Health Informatics
