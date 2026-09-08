@@ -7,7 +7,7 @@ link: https://doi.org/10.48550/arXiv.2608.08182
 cite: auto-2026-biologically-informed-representation-learning-for-robust-cross-center-generaliza.bib
 state: Under review
 type: post
-weight: 11
+weight: 12
 showTableOfContents: true
 auto_generated: true
 source_id: arxiv:2608.08182

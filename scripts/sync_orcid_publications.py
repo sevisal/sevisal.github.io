@@ -43,6 +43,24 @@ PUBLISHED_OVERRIDES = {
         "journal": "Neurocomputing",
         "doi": "10.1016/j.neucom.2026.134400",
     },
+    "arxiv:2602.01924": {
+        "title": "Bayesian Integration of Nonlinear Incomplete Clinical Data",
+        "year": "2026",
+        "month": "09",
+        "day": "04",
+        "work_type": "journal-article",
+        "journal": "IEEE Journal of Biomedical and Health Informatics",
+        "doi": "10.1109/JBHI.2026.3730983",
+    },
+    "10.1109/jbhi.2026.3730983": {
+        "title": "Bayesian Integration of Nonlinear Incomplete Clinical Data",
+        "year": "2026",
+        "month": "09",
+        "day": "04",
+        "work_type": "journal-article",
+        "journal": "IEEE Journal of Biomedical and Health Informatics",
+        "doi": "10.1109/JBHI.2026.3730983",
+    },
 }
 
 METADATA_OVERRIDES = {
@@ -300,15 +318,22 @@ def has_target_author(authors: list[str], author_name: str) -> bool:
 
 
 def crossref_date(item: dict) -> tuple[str, str, str]:
+    candidates: list[tuple[int, int, tuple[str, str, str]]] = []
     for key in ("published-print", "published-online", "issued"):
         parts = item.get(key, {}).get("date-parts", [])
         if parts and parts[0]:
             date = [str(part) for part in parts[0]]
-            return (
+            candidates.append((
+                len(date),
+                1 if key == "issued" else 2,
+                (
                 date[0] if len(date) > 0 else "",
                 date[1].zfill(2) if len(date) > 1 else "01",
                 date[2].zfill(2) if len(date) > 2 else "01",
-            )
+                ),
+            ))
+    if candidates:
+        return max(candidates, key=lambda candidate: (candidate[0], candidate[1]))[2]
     return "", "", ""
 
 
@@ -385,10 +410,12 @@ def promote_preprint(work: Work) -> Work:
 
 
 def apply_metadata_overrides(work: Work) -> Work:
-    override = METADATA_OVERRIDES.get(work.put_code)
-    if override:
-        for field_name, field_value in override.items():
-            setattr(work, field_name, field_value)
+    for overrides in (PUBLISHED_OVERRIDES, METADATA_OVERRIDES):
+        for key in (work.put_code, work.doi.lower()):
+            override = overrides.get(key)
+            if override:
+                for field_name, field_value in override.items():
+                    setattr(work, field_name, field_value)
     return work
 
 
@@ -480,6 +507,7 @@ def fetch_crossref_author_works(author_name: str, rows: int, from_year: int) -> 
         work = work_from_crossref(item, source)
         if work and has_target_author(work.authors, author_name):
             work.put_code = f"crossref:{work.doi.lower()}"
+            work = apply_metadata_overrides(work)
             works.append(work)
     return works
 
