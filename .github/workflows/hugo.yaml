@@ -9,7 +9,7 @@ on:
 
   # Primary weekly sync + delayed-run fallback
   schedule:
-    - cron: "53 10 * * 2"
+    - cron: "58 11 * * 2"
       timezone: "Europe/Madrid"
     - cron: "41 6 * * 3"
       timezone: "Europe/Madrid"
