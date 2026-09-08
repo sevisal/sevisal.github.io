@@ -9,7 +9,7 @@ on:
 
   # Primary weekly sync + delayed-run fallback
   schedule:
-    - cron: "56 12 * * 2"
+    - cron: "49 13 * * 2"
       timezone: "Europe/Madrid"
     - cron: "41 6 * * 3"
       timezone: "Europe/Madrid"
@@ -80,7 +80,7 @@ jobs:
                 --jq "[.workflow_runs[] | select(.created_at >= \"${SINCE_UTC}\")] | length"
             )"
 
-            echo "Successful scheduled runs found since Monday: ${SUCCESSFUL_PRIMARY_RUNS}"
+            echo "Successful scheduled runs found since Tuesday: ${SUCCESSFUL_PRIMARY_RUNS}"
 
             if [[ "${SUCCESSFUL_PRIMARY_RUNS}" -gt 0 ]]; then
               echo "run_sync=false" >> "$GITHUB_OUTPUT"
@@ -114,15 +114,12 @@ jobs:
           file_pattern: "content/publications/* content/projects/_index.md"
 
       - name: Warn if status email is not configured
-        if: env.MAIL_CONNECTION == ''
+        if: steps.auto-commit.outputs.changes_detected == 'true' && env.MAIL_CONNECTION == ''
         run: |
-          echo "::warning::MAIL_CONNECTION is not configured. The temporary status email cannot be sent."
+          echo "::warning::MAIL_CONNECTION is not configured. The academic-content change email cannot be sent."
 
-      # TEMPORARY: send a status email on every workflow run while testing SMTP.
-      # Once email delivery is confirmed, replace the condition with the desired
-      # permanent policy (for example, only when academic content changes).
       - name: Email workflow status notification
-        if: env.MAIL_CONNECTION != ''
+        if: steps.auto-commit.outputs.changes_detected == 'true' && env.MAIL_CONNECTION != ''
         continue-on-error: true
         uses: dawidd6/action-send-mail@v18
         with:

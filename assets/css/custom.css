@@ -131,15 +131,34 @@ main#content > .container,
 }
 
 .home-about {
-  margin-bottom: 1.5rem;
+  align-items: center;
+  display: grid;
+  gap: 2.25rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin: 0 auto 1.9rem;
+  max-width: 860px;
+  text-align: left;
+}
+
+.home-about .avatar {
+  order: 2;
+}
+
+.home-about-copy {
+  container-type: inline-size;
+  min-width: 0;
+  order: 1;
 }
 
 .home-about .avatar img {
+  border-radius: 50%;
   box-shadow: 0 18px 55px var(--site-shadow);
+  object-fit: cover;
 }
 
 .home-about h1 {
-  font-size: 2.15rem;
+  font-size: clamp(2rem, 4.7vw, 3.15rem);
+  line-height: 1.02;
   margin-bottom: 0.35rem;
 }
 
@@ -151,13 +170,26 @@ main#content > .container,
 }
 
 .research-highlights {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 0.55rem;
-  justify-content: center;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: flex-start;
   list-style: none;
-  margin: 1.15rem auto 0;
+  margin: 1.15rem 0 0;
+  max-width: 100%;
   padding: 0;
+}
+
+@container (max-width: 34rem) {
+  .research-highlights {
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+
+@container (max-width: 15rem) {
+  .research-highlights {
+    grid-template-columns: minmax(0, max-content);
+  }
 }
 
 .research-highlights li {
@@ -166,6 +198,7 @@ main#content > .container,
   border-radius: 999px;
   color: var(--site-chip-text);
   font-size: 0.78rem;
+  flex: 0 0 auto;
   font-weight: 700;
   line-height: 1;
   padding: 0.45rem 0.65rem;
@@ -674,30 +707,66 @@ main#content > .container,
     padding-right: 1rem;
   }
 
+  main#content > .container,
+  .home-about,
+  .home-about-copy,
+  .markdown-content,
+  .home-posts {
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 0;
+  }
+
   .home-about {
-    margin-bottom: 0.65rem;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+    margin-bottom: 0.9rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-about .avatar,
+  .home-about-copy {
+    order: 2;
+  }
+
+  .home-about .avatar {
+    order: 1;
   }
 
   .home-about .avatar img.size-m {
-    height: 7rem;
-    width: 7rem;
+    border-radius: 50%;
+    height: 8.25rem;
+    width: 8.25rem;
   }
 
   .home-about h1 {
     font-size: 1.55rem;
+    line-height: 1.12;
     margin-bottom: 0.4rem;
-    margin-top: 0.85rem;
+    margin-top: 0;
+    overflow-wrap: normal;
+    white-space: normal;
   }
 
   .home-about h3 {
     font-size: 0.9rem;
+    line-height: 1.35;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 0.8rem;
+    max-width: 20rem;
+    overflow-wrap: break-word;
+    white-space: normal;
   }
 
   .research-highlights {
     gap: 0.35rem;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0.75rem;
-    max-width: 17rem;
+    max-width: min(100%, 21rem);
   }
 
   .research-highlights li {

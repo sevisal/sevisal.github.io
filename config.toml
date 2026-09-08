@@ -12,7 +12,7 @@ pygmentsStyle = "monokai"
 
 [params]
   footer = ""
-  description = "Interpretable Machine Learning for Biomedical Data"
+  description = "Researcher in Bayesian and Interpretable Machine Learning"
   avatarURL = "/images/Foto_Profe.jpg"
   AvatarAltText = "avatar"
   avatarSize = "size-m"

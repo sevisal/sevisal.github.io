@@ -1,23 +1,24 @@
 {{ define "main" }}
 <section class="home-about">
+    <div class="home-about-copy">
+        <h1>{{ .Site.Title }}</h1>
+        {{ if isset .Site.Params "description" }}
+            <h3>{{ .Site.Params.Description }}</h3>
+        {{ end }}
+        {{ with .Site.Params.ResearchHighlights }}
+            <ul class="research-highlights" aria-label="Research focus">
+                {{ range . }}
+                <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+        {{ end }}
+    </div>
+
 	<div class="avatar">
         {{ if isset .Site.Params "avatarurl" }}
         <img class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Scratch.Get "avatarImgSrc" }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}" />
         {{ end }}
 	</div>
-
-    <h1>{{ .Site.Title }}</h1>
-    {{ if isset .Site.Params "description" }}
-        <h3>{{ .Site.Params.Description }}</h3>
-    {{ end }}
-    {{ with .Site.Params.ResearchHighlights }}
-        <ul class="research-highlights" aria-label="Research focus">
-            {{ range . }}
-            <li>{{ . }}</li>
-            {{ end }}
-        </ul>
-    {{ end }}
-
 </section>
 
 <div class="flex-break"></div>
