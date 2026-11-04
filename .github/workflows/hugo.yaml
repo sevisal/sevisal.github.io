@@ -101,6 +101,8 @@ jobs:
 
       - name: Sync projects from UC3M
         if: steps.sync-gate.outputs.run_sync == 'true'
+        id: uc3m-sync
+        continue-on-error: true
         run: python scripts/sync_uc3m_projects.py
 
       - name: Commit updated academic profile
