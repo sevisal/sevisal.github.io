@@ -7,7 +7,7 @@ link: https://doi.org/10.1016/j.engappai.2025.111887
 cite: auto-2025-unified-bayesian-representation-for-high-dimensional-multi-modal-biomedical-data.bib
 state: Published
 type: post
-weight: 17
+weight: 18
 showTableOfContents: true
 auto_generated: true
 source_id: 190357035

@@ -7,7 +7,7 @@ link: https://doi.org/10.1101/2024.11.05.622049
 cite: auto-2024-automatic-surveillance-ofescherichia-colibacteriological-strains-within-clinical.bib
 state: Under review
 type: post
-weight: 23
+weight: 24
 showTableOfContents: true
 auto_generated: true
 source_id: 171071327

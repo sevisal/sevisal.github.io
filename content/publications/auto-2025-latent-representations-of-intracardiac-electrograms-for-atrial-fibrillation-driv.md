@@ -7,7 +7,7 @@ link: https://doi.org/10.48550/arXiv.2507.19547
 cite: auto-2025-latent-representations-of-intracardiac-electrograms-for-atrial-fibrillation-driv.bib
 state: Under review
 type: post
-weight: 19
+weight: 20
 showTableOfContents: true
 auto_generated: true
 source_id: arxiv:2507.19547

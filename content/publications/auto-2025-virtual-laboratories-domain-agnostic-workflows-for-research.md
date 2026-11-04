@@ -7,7 +7,7 @@ link: https://doi.org/10.48550/arXiv.2507.06271
 cite: auto-2025-virtual-laboratories-domain-agnostic-workflows-for-research.bib
 state: Under review
 type: post
-weight: 21
+weight: 22
 showTableOfContents: true
 auto_generated: true
 source_id: arxiv:2507.06271

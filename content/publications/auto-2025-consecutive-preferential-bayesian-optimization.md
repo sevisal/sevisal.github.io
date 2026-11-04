@@ -7,7 +7,7 @@ link: https://doi.org/10.48550/arXiv.2511.05163
 cite: auto-2025-consecutive-preferential-bayesian-optimization.bib
 state: Under review
 type: post
-weight: 16
+weight: 17
 showTableOfContents: true
 auto_generated: true
 source_id: arxiv:2511.05163

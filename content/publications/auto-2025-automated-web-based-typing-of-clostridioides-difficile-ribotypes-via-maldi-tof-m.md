@@ -7,7 +7,7 @@ link: https://doi.org/10.1186/s12859-025-06200-6
 cite: auto-2025-automated-web-based-typing-of-clostridioides-difficile-ribotypes-via-maldi-tof-m.bib
 state: Published
 type: post
-weight: 20
+weight: 21
 showTableOfContents: true
 auto_generated: true
 source_id: 170593803
