@@ -14,7 +14,7 @@ import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urljoin
-
+import time
 
 DEFAULT_PROFILE_URL = "https://researchportal.uc3m.es/display/inv45809"
 USER_AGENT = "sevisal.github.io UC3M project sync (https://sevisal.github.io)"
@@ -39,27 +39,71 @@ class Project:
         return self.end_year is None or self.end_year >= year
 
 
-def fetch_html(url: str) -> str:
+def fetch_html(url: str, retries: int = 4, timeout: int = 45) -> str:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            body = response.read()
-    except urllib.error.HTTPError as exc:
-        raise RuntimeError(f"UC3M request failed: {exc.code} {url}") from exc
-    except urllib.error.URLError as exc:
-        if not isinstance(exc.reason, ssl.SSLCertVerificationError):
-            raise
-        print(
-            "Warning: UC3M certificate verification failed; retrying without certificate verification.",
-            file=sys.stderr,
-        )
-        context = ssl._create_unverified_context()
-        with urllib.request.urlopen(request, timeout=30, context=context) as response:
-            body = response.read()
+
+    for attempt in range(1, retries + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                body = response.read()
+            break
+
+        except urllib.error.HTTPError as exc:
+            raise RuntimeError(
+                f"UC3M request failed: {exc.code} {url}"
+            ) from exc
+
+        except urllib.error.URLError as exc:
+            if isinstance(exc.reason, ssl.SSLCertVerificationError):
+                print(
+                    "Warning: UC3M certificate verification failed; "
+                    "retrying without certificate verification.",
+                    file=sys.stderr,
+                )
+                context = ssl._create_unverified_context()
+
+                with urllib.request.urlopen(
+                    request,
+                    timeout=timeout,
+                    context=context,
+                ) as response:
+                    body = response.read()
+
+                break
+
+            if attempt == retries:
+                raise RuntimeError(
+                    f"UC3M request failed after {retries} attempts: {url}"
+                ) from exc
+
+            wait = 2 ** attempt
+            print(
+                f"Warning: UC3M request failed "
+                f"(attempt {attempt}/{retries}): {exc}. "
+                f"Retrying in {wait}s...",
+                file=sys.stderr,
+            )
+            time.sleep(wait)
+
+        except TimeoutError as exc:
+            if attempt == retries:
+                raise RuntimeError(
+                    f"UC3M request timed out after {retries} attempts: {url}"
+                ) from exc
+
+            wait = 2 ** attempt
+            print(
+                f"Warning: UC3M request timed out "
+                f"(attempt {attempt}/{retries}). "
+                f"Retrying in {wait}s...",
+                file=sys.stderr,
+            )
+            time.sleep(wait)
 
     decoded = body.decode("utf-8", errors="replace")
     if "\ufffd" in decoded:
         decoded = body.decode("latin-1", errors="replace")
+
     return decoded
 
 
