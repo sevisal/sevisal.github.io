@@ -7,7 +7,7 @@ link: https://doi.org/10.48550/arXiv.2610.37074
 cite: auto-2026-systematic-morphometric-brain-autoencoding-for-representation-learning-in-neurod.bib
 state: Under review
 type: post
-weight: 11
+weight: 12
 showTableOfContents: true
 auto_generated: true
 source_id: arxiv:2610.37074

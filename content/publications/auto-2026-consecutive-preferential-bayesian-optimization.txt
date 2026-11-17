@@ -1,0 +1,9 @@
+Erarslan, Aras and
+             Sevilla Salcedo, Carlos and
+             Tanskanen, Ville and
+             Nisov, Anni and
+             Päiväkumpu, Eero and
+             Aisala, Heikki and
+             Honkapää, Kaisu and
+             Klami, Arto and
+             Mikkola, Petrus (2026). Consecutive Preferential Bayesian Optimization. Transactions on Machine Learning Research.

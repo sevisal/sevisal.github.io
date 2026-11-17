@@ -7,7 +7,7 @@ link: https://doi.org/10.48550/arXiv.2511.17611
 cite: auto-2025-ai-driven-generation-of-maldi-tof-ms-for-microbial-characterization.bib
 state: Under review
 type: post
-weight: 16
+weight: 17
 showTableOfContents: true
 auto_generated: true
 source_id: arxiv:2511.17611
